@@ -1,0 +1,434 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css?family=Anton|Fjalla+One|Righteous|Staatliches" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Encode+Sans+Condensed" rel="stylesheet">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<!-- novas -->
+	<title>Cleison Lima - Jogo da Velha</title>
+	<meta charset="UTF-8">
+	<!-- css e js -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+	<!-- jQuery e Popper.js -->
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<style>
+		body{
+			background-image: url(img/fundoMadeira.jpg);
+		}
+	</style>
+</head>
+<body>
+	<nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color: #0C243B;">
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+			<div class="container">
+				<div class="navbar-nav">
+						<a class="nav-brand nav-link clei active" href="index.html">Cleison Lima </a>
+						<a class="nav-item nav-link" href="redeSocial.html">Contatos </a>
+				</div>
+			</div>
+		</div>
+	</nav>
+	
+
+
+	<div class="container-fluid">
+		<div class="row" id="jogo" style="display:none">
+			<div class="col-2">
+				<div id="vezDeJogar" width="200px"></div>
+				<div class="progress" id="progresso"></div>
+			</div>
+			<div id="CampoDeJogo" class="col-8">
+				<table class="text-center">
+					<tr>
+						<td id="campo1" style="border-bottom: 2px solid #000; border-radius:10px 0 0 0;">&nbsp;</td>
+						<td id="campo2" style="border-left: 2px solid #000; border-right: 2px solid #000">&nbsp;</td>
+						<td id="campo3" style="border-bottom: 2px solid #000; border-radius: 0 10px 0 0">&nbsp;</td>
+					</tr>
+					<tr>
+						<td id="campo4" style="border-bottom: 2px solid #000">&nbsp;</td>
+						<td id="campo5" style="border: 2px solid #000">&nbsp;</td>
+						<td id="campo6" style="border-bottom: 2px solid #000">&nbsp;</td>
+					</tr>
+					<tr>
+						<td id="campo7" style="border-radius: 0 0 0 10px">&nbsp;</td>
+						<td id="campo8" style="border-left: 2px solid #000; border-right: 2px solid #000">&nbsp;</td>
+						<td id="campo9" style="border-radius: 0 0 10px 0">&nbsp;</td>
+					</tr>
+				</table>
+			</div>
+			<div class="col-2">
+				<div id="placar" width="200px"></div>
+			</div>
+		</div>
+	</div>
+		
+	<footer class="container-fluid" id="rodape">
+		<div class="row text-center">
+			<div class="col-lg-2 col-md-12">
+				<img src="img/eu.jpg" height="60px" style="border-radius: 100%; height: 80px; object-fit: cover; width: 80px; "/>
+			</div>
+			<div class="col-lg-2 col-md-12">
+				<span class="nav-link js-scroll-trigger" href="index.html"><i class="fab fa-whatsapp" style="font-size:19px;"></i>&nbsp;&nbsp;(21)&nbsp;97365-9787<br><i class="fas fa-phone" style="font-size:17px;"></i>&nbsp;&nbsp;(21)&nbsp;2222-3333&nbsp;&nbsp;</span>
+			</div>
+			<div class="col-lg-4 col-md-12">
+				<span style="font-size:0.9em">COPYRIGHT © 2018 Todos os direitos reservados.<br>CLEISON LIMA Comércio digital LTDA. - CNPJ: 11.200.418/0004-01 - Avenida Presidente Vargas, 121, CENTRO - RJ, CEP: 95742-086, Nova iguaçu, RJ, BRASIL.</span>
+			</div>
+			<div class="col-lg-2 col-md-12">
+				<span class="nav-link js-scroll-trigger" href="index.html"><i class="fab fa-instagram" style="font-size:25px;"></i>&nbsp;&nbsp;@cleisonls</span>
+			</div>
+			<div class="col-lg-2 col-md-12">
+				<span class="nav-link js-scroll-trigger" href="index.html"><i class="fab fa-facebook" style="font-size:25px;"></i>&nbsp;&nbsp;/cleison.silva.798</span>
+			</div>
+		</div>
+	</footer>
+	
+	<script>
+			
+		$(function(){
+
+			variaveisIniciais();
+			start();
+
+			function variaveisIniciais(){
+				$('#jogo').show(500);
+				ptsx = 0;
+				ptsbola = 0;
+				ptsvelha = 0;
+				jogador = 0;
+			}
+
+			function start(){
+				contagem = 0;
+				c1 = 2;
+				c2 = 2;
+				c3 = 2;
+				c4 = 2;
+				c5 = 2;
+				c6 = 2;
+				c7 = 2;
+				c8 = 2;
+				c9 = 2;
+				$('#campo1').html('&nbsp;').css('background','rgb(0, 0, 0 , 0.2)');
+				$('#campo2').html('&nbsp;').css('background','rgb(0, 0, 0 , 0.2)');
+				$('#campo3').html('&nbsp;').css('background','rgb(0, 0, 0 , 0.2)');
+				$('#campo4').html('&nbsp;').css('background','rgb(0, 0, 0 , 0.2)');
+				$('#campo5').html('&nbsp;').css('background','rgb(0, 0, 0 , 0.2)');
+				$('#campo6').html('&nbsp;').css('background','rgb(0, 0, 0 , 0.2)');
+				$('#campo7').html('&nbsp;').css('background','rgb(0, 0, 0 , 0.2)');
+				$('#campo8').html('&nbsp;').css('background','rgb(0, 0, 0 , 0.2)');
+				$('#campo9').html('&nbsp;').css('background','rgb(0, 0, 0 , 0.2)');
+				
+				if (jogador == 0){
+					temporizador();
+				}
+			}
+
+			function trocajogador(){
+				if (jogador == 1){
+					jogador = 0;
+					temporizador();
+				} else if (jogador == 0){
+					jogador = 1;
+				}
+			}
+
+			function temporizador(){
+				interval = setInterval(function(){
+					if (contagem <= 99){
+						contagem +=1;
+					} else {
+						contagem = 0;
+						jogadaCpu();
+						clearInterval(interval);
+					}
+					$('#progresso').html('<div class="progress-bar" role="progressbar" style="width: '+contagem+'%;" aria-valuenow="'+contagem+'" aria-valuemin="0" aria-valuemax="100">'+contagem+'%</div>');
+				},20);
+			}
+
+			function jogadaCpu(){
+				while(c1 == 2 || c2 == 2 || c3 == 2 || c4 == 2 || c5 == 2 || c6 == 2 || c7 == 2 || c8 == 2 || c9 == 2 && jogador == 0){
+				
+					if (c1 == 2 && c2 == 0 && c3 == 0 || c1 == 2 && c4 == 0 && c7 == 0 || c1 == 2 && c5 == 0 && c9 == 0){
+						bolaCampo1();
+						trocajogador();
+						break;
+					} else if (c2 == 2 && c1 == 0 && c3 == 0 || c2 == 2 && c5 == 0 && c8 == 0){
+						bolaCampo2();
+						trocajogador();
+						break;
+					} else if (c3 == 2 && c1 == 0 && c2 == 0 || c3 == 2 && c6 == 0 && c9 == 0 || c3 == 2 && c5 == 0 && c7 == 0){
+						bolaCampo3();
+						trocajogador();
+						break;
+					} else if (c4 == 2 && c1 == 0 && c7 == 0 || c4 == 2 && c5 == 0 && c6 == 0){
+						bolaCampo4();
+						trocajogador();
+						break;
+					} else if (c5 == 2 && c1 == 0 && c9 == 0 || c5 == 2 && c3 == 0 && c7 == 0 || c5 == 2 && c2 == 0 && c8 == 0 || c5 == 2 && c4 == 0 && c6 == 0){
+						bolaCampo5();
+						trocajogador();
+						break;
+					} else if (c6 == 2 && c3 == 0 && c9 == 0 || c6 == 2 && c4 == 0 && c5 == 0){
+						bolaCampo6();
+						trocajogador();
+						break;
+					} else if (c7 == 2 && c1 == 0 && c4 == 0 || c7 == 2 && c8 == 0 && c9 == 0 || c7 == 2 && c3 == 0 && c5 == 0){
+						bolaCampo7();
+						trocajogador();
+						break;
+					} else if (c8 == 2 && c7 == 0 && c9 == 0 || c8 == 2 && c2 == 0 && c5 == 0){
+						bolaCampo8();
+						trocajogador();
+						break;
+					} else if (c9 == 2 && c3 == 0 && c6 == 0 || c9 == 2 && c7 == 0 && c8 == 0 || c9 == 2 && c1 == 0 && c5 == 0){
+						bolaCampo9();
+						trocajogador();
+						break;
+					} else if (c1 == 2 && c2 == 1 && c3 == 1 || c1 == 2 && c4 == 1 && c7 == 1 || c1 == 2 && c5 == 1 && c9 == 1){
+						bolaCampo1();
+						trocajogador();
+						break;
+					} else if (c2 == 2 && c1 == 1 && c3 == 1 || c2 == 2 && c5 == 1 && c8 == 1){
+						bolaCampo2();
+						trocajogador();
+						break;
+					} else if (c3 == 2 && c1 == 1 && c2 == 1 || c3 == 2 && c6 == 1 && c9 == 1 || c3 == 2 && c5 == 1 && c7 == 1){
+						bolaCampo3();
+						trocajogador();
+						break;
+					} else if (c4 == 2 && c1 == 1 && c7 == 1 || c4 == 2 && c5 == 1 && c6 == 1){
+						bolaCampo4();
+						trocajogador();
+						break;
+					}else if (c5 == 2 && c1 == 1 && c9 == 1 || c5 == 2 && c3 == 1 && c7 == 1 || c5 == 2 && c2 == 1 && c8 == 1 || c5 == 2 && c4 == 1 && c6 == 1){
+						bolaCampo5();
+						trocajogador();
+						break;
+					} else if (c6 == 2 && c3 == 1 && c9 == 1 || c6 == 2 && c4 == 1 && c5 == 1){
+						bolaCampo6();
+						trocajogador();
+						break;
+					} else if (c7 == 2 && c1 == 1 && c4 == 1 || c7 == 2 && c8 == 1 && c9 == 1 || c7 == 2 && c3 == 1 && c5 == 1){
+						bolaCampo7();
+						trocajogador();
+						break;
+					} else if (c8 == 2 && c7 == 1 && c9 == 1 || c8 == 2 && c2 == 1 && c5 == 1){
+						bolaCampo8();
+						trocajogador();
+						break;
+					} else if (c9 == 2 && c3 == 1 && c6 == 1 || c9 == 2 && c7 == 1 && c8 == 1 || c9 == 2 && c1 == 1 && c5 == 1){
+						bolaCampo9();
+						trocajogador();
+						break;
+					} else {
+						do{
+							sorteio = Math.floor(Math.random() * 10);
+						}while(sorteio <= 0);
+						if (sorteio == 1 && c1 == 2){
+							bolaCampo1();
+							trocajogador();
+							break;
+						} else if (sorteio == 2 && c2 == 2){
+							bolaCampo2();
+							trocajogador();
+							break;
+						} else if (sorteio == 3 && c3 == 2){
+							bolaCampo3();
+							trocajogador();
+							break;
+						} else if (sorteio == 4 && c4 == 2){
+							bolaCampo4();
+							trocajogador();
+							break;
+						} else if (sorteio == 5 && c5 == 2){
+							bolaCampo5();
+							trocajogador();
+							break;
+						} else if (sorteio == 6 && c6 == 2){
+							bolaCampo6();
+							trocajogador();
+							break;
+						} else if (sorteio == 7 && c7 == 2){
+							bolaCampo7();
+							trocajogador();
+							break;
+						} else if (sorteio == 8 && c8 == 2){
+							bolaCampo8();
+							trocajogador();
+							break;
+						} else if (sorteio == 9 && c9 == 2){
+							bolaCampo9();
+							trocajogador();
+							break;
+						}
+					}
+				}
+			}
+			
+			function bolaCampo1(){
+				$('#campo1').html('<h1>O</h1>').css({'background':'rgb(0, 0, 0 , 0.4)','color':'#EB6054'});
+				c1 = 0;
+			}
+			function bolaCampo2(){
+				$('#campo2').html('<h1>O</h1>').css({'background':'rgb(0, 0, 0 , 0.4)','color':'#EB6054'});
+				c2 = 0;
+			}
+			function bolaCampo3(){
+				$('#campo3').html('<h1>O</h1>').css({'background':'rgb(0, 0, 0 , 0.4)','color':'#EB6054'});
+				c3 = 0;
+			}
+			function bolaCampo4(){
+				$('#campo4').html('<h1>O</h1>').css({'background':'rgb(0, 0, 0 , 0.4)','color':'#EB6054'});
+				c4 = 0;
+			}
+			function bolaCampo5(){
+				$('#campo5').html('<h1>O</h1>').css({'background':'rgb(0, 0, 0 , 0.4)','color':'#EB6054'});
+				c5 = 0;
+			}
+			function bolaCampo6(){
+				$('#campo6').html('<h1>O</h1>').css({'background':'rgb(0, 0, 0 , 0.4)','color':'#EB6054'});
+				c6 = 0;
+			}
+			function bolaCampo7(){
+				$('#campo7').html('<h1>O</h1>').css({'background':'rgb(0, 0, 0 , 0.4)','color':'#EB6054'});
+				c7 = 0;
+			}
+			function bolaCampo8(){
+				$('#campo8').html('<h1>O</h1>').css({'background':'rgb(0, 0, 0 , 0.4)','color':'#EB6054'});
+				c8 = 0;
+			}
+			function bolaCampo9(){
+				$('#campo9').html('<h1>O</h1>').css({'background':'rgb(0, 0, 0 , 0.4)','color':'#EB6054'});
+				c9 = 0;
+			}
+
+			
+			$('#campo1').click(function(){
+				if ( jogador == 1 && c1 == 2){
+					$('#campo1').html('<h1>X</h1>').css({'background':'rgb(0, 0, 0 , 0.4)','color':'#6557FF'});
+					c1 = 1;
+					trocajogador();
+				}
+			});
+			$('#campo2').click(function(){
+				if ( jogador == 1 && c2 == 2){
+					$('#campo2').html('<h1>X</h1>').css({'background':'rgb(0, 0, 0 , 0.4)','color':'#6557FF'});
+					c2 = 1;
+					trocajogador();
+				}
+			});
+			$('#campo3').click(function(){
+				if ( jogador == 1 && c3 == 2){
+					$('#campo3').html('<h1>X</h1>').css({'background':'rgb(0, 0, 0 , 0.4)','color':'#6557FF'});
+					c3 = 1;
+					trocajogador();
+				}
+			});
+			$('#campo4').click(function(){
+				if ( jogador == 1 && c4 == 2){
+					$('#campo4').html('<h1>X</h1>').css({'background':'rgb(0, 0, 0 , 0.4)','color':'#6557FF'});
+					c4 = 1;
+					trocajogador();
+				}
+			});
+			$('#campo5').click(function(){
+				if ( jogador == 1 && c5 == 2){
+					$('#campo5').html('<h1>X</h1>').css({'background':'rgb(0, 0, 0 , 0.4)','color':'#6557FF'});
+					c5 = 1;
+					trocajogador();
+				}
+			});
+			$('#campo6').click(function(){
+				if ( jogador == 1 && c6 == 2){
+					$('#campo6').html('<h1>X</h1>').css({'background':'rgb(0, 0, 0 , 0.4)','color':'#6557FF'});
+					c6 = 1;
+					trocajogador();
+				}
+			});
+			$('#campo7').click(function(){
+				if ( jogador == 1 && c7 == 2){
+					$('#campo7').html('<h1>X</h1>').css({'background':'rgb(0, 0, 0 , 0.4)','color':'#6557FF'});
+					c7 = 1;
+					trocajogador();
+				}
+			});
+			$('#campo8').click(function(){
+				if ( jogador == 1 && c8 == 2){
+					$('#campo8').html('<h1>X</h1>').css({'background':'rgb(0, 0, 0 , 0.4)','color':'#6557FF'});
+					c8 = 1;
+					trocajogador();
+				}
+			});
+			$('#campo9').click(function(){
+				if ( jogador == 1 && c9 == 2){
+					$('#campo9').html('<h1>X</h1>').css({'background':'rgb(0, 0, 0 , 0.4)','color':'#6557FF'});
+					c9 = 1;
+					trocajogador();
+				}
+			});
+			
+				
+			setInterval(function placar(){
+			
+				if ( c1 == 0 && c2 == 0 && c3 == 0 || c4 == 0 && c5 == 0 && c6 == 0 || c7 == 0 && c8 == 0 && c9 == 0 || c1 == 0 && c4 == 0 && c7 == 0 || c2 == 0 && c5 == 0 && c8 == 0 || c3 == 0 && c6 == 0 && c9 == 0 || c1 == 0 && c5 == 0 && c9 == 0 || c3 == 0 && c5 == 0 && c7 == 0){
+					alert("BOLA GANHOU!");
+					jogador = 0;
+					start();
+					ptsbola++;
+				}
+				
+				if ( c1 == 1 && c2 == 1 && c3 == 1 || c4 == 1 && c5 == 1 && c6 == 1 || c7 == 1 && c8 == 1 && c9 == 1 || c1 == 1 && c4 == 1 && c7 == 1 || c2 == 1 && c5 == 1 && c8 == 1 || c3 == 1 && c6 == 1 && c9 == 1 || c1 == 1 && c5 == 1 && c9 == 1 || c3 == 1 && c5 == 1 && c7 == 1){
+					alert("X GANHOU!");
+					jogador = 1;
+					start();
+					ptsx++;
+				}
+				
+				if ( c1 != 2 && c2 != 2 && c3 != 2 && c4 != 2 && c5 != 2 && c6 != 2 && c7 != 2 && c8 != 2 && c9 != 2){
+					alert("VELHA!");
+					start();
+					ptsvelha++;
+				}
+				
+				if ( jogador == 0 ){
+					$('#vezDeJogar').html(''
+						+'<center>'
+							+'<h2 style="color:#fff; font-size:1.7em">Vez de:</h2>'
+							+'<h2 style="color:#EB6054; font-size:2.5em">O</h2>'
+						+'</center>');
+					} else if ( jogador == 1 ){
+					$('#vezDeJogar').html(''
+						+'<center>'
+							+'<h2 style="color:#fff; font-size:1.7em">Vez de:</h2>'
+							+'<h2 style="color:#6557FF; font-size:2.5em">X</h2>'
+						+'</center>');
+					}
+			
+				$('#placar').html(''
+					+'<center>'
+						+'<h2 style="color:#fff; font-size:1.7em">Placar</h2>'
+						+'<h2 style="color:#6557FF; font-size:1.4em">X = '+ptsx+'</h2>'
+						+'<h2 style="color:#EB6054; font-size:1.4em">O = '+ptsbola+'</h2>'
+						+'<h2 style="color:#38E854; font-size:1.4em">V = '+ptsvelha+'</h2>'
+					+'</center>');
+			},300);
+		});
+	</script>
+</body>
+</html>	
+	
+</body>
+</html>
+
+<style>
+
+</style>

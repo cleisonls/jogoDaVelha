@@ -1,0 +1,112 @@
+body{
+	background:#37AFBF;
+	background-attachment: fixed;
+}
+
+
+h1{
+	font-size: 3em;
+}
+
+h2{
+	color:#fff;
+}
+
+p{
+	color:#fff;
+}
+
+.btn{
+	background:#0C243B;
+}
+
+
+.navbar-toggler{
+		font-size: 3.3rem;
+}
+
+.hoverRS:hover{
+	font-size:1.1em;
+	margin-top:-5px;
+}
+
+nav div a:hover{
+	color: #37AFBF!important;
+}
+
+nav div a.active:hover{
+	color:#37AFBF!important;
+}
+
+nav div a.disabled:hover{
+	color:#6c757d!important;
+}
+
+nav div a{
+	margin-top:7px;
+	margin-right:10px;
+	font-family: 'Staatliches', cursive;
+	font-size: 1.2em;
+}
+
+nav div a.clei{
+	margin-top:3px;
+	font-size: 1.5em;
+}
+
+table tr td {
+	width: 200px;
+	height: 200px;
+}
+
+#CampoDeJogo{
+	margin-top: 250px;
+	margin-bottom: 260px;
+	height: 100%;
+	min-height: 100%;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-align-items: center;
+	align-items: center;
+	-webkit-justify-content: center;
+	justify-content: center;
+}
+
+#placar{
+	margin-top:470px;
+	background: rgb(0,0,0,0.3);
+	border-radius: 10px;
+	padding:10px;
+}
+
+#vezDeJogar{
+	margin-top:470px;
+	background: rgb(0,0,0,0.3);
+	border-radius: 10px;
+	padding: 30px 10px 20px 10px;
+	height: 162px;
+}
+
+#intro{
+	margin-top:100px;
+	margin-bottom:200px;
+}
+
+footer{
+	color: #fff; background:#0C243B;
+	padding-bottom: 150px;
+	padding-top: 150px;
+}
+
+.margintop20px{
+	margin-top: 20px;
+}
+
+.text-sombra{
+	text-shadow: 1px 1px 5px #000;
+}
+
+#calculadora{
+	margin-top: 250px;
+	margin-bottom: 550px;
+	}
